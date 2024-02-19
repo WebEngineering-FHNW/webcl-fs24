@@ -1,0 +1,42 @@
+body {
+    margin-top:     2rem;
+    font-family:    "Helvetica Neue", sans-serif;
+}
+main {
+    max-width:      max-content;
+    margin-inline:  auto;
+    padding:        2rem;
+    box-shadow:     0 .3rem .5rem 0 rgba(0, 0, 0, 0.2),
+                    0 .4rem  1rem 0 rgba(0, 0, 0, 0.2);
+}
+h1 {
+    font-family:    "Comic Sans MS", cursive, sans-serif;
+    text-align:     center;
+}
+input[type=text] {
+    font-family:    "Comic Sans MS", cursive, sans-serif;
+    font-size:      1.1rem;
+    color:          darkblue;
+    border-width:   0 0 1px 0;
+}
+input[type=text]:focus {
+    border-color:   orange;
+    outline:        transparent none 0;
+}
+#todoContainer {
+    display:                grid;
+    grid-column-gap:        0.5rem;
+    grid-template-columns:  1.7rem auto auto;
+    margin-bottom:          0.5rem ;
+}
+button#plus,
+button#fortune {
+    position:       relative;
+    top:            -1rem;
+}
+button.delete {
+    background-color:   transparent;
+    border:             none;
+    color:              red;
+    font-size:          1.3rem;
+}
