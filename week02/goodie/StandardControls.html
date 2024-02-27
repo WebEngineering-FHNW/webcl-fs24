@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <title>Standard HTML Input Controls</title>
     <style>
-
+        .inputs {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            gap: 0.2em 1em;
+        }
+        :invalid {
+            border: 3px dashed currentColor;
+            color: red;
+        }
     </style>
     <script>
         const toggleLED = el => el.setAttribute("src", el.src.match("on") ? "led_red_off.png" : "led_red_on.png");
@@ -18,7 +26,7 @@
         <option>third</option>
     </datalist>
     <div class = "inputs">
-        <label for="t1">text</label>            <input id="t1"  type="text" >
+        <label for="t1">text</label>            <input id="t1"  type="text" pattern="[A-Z]*">
         <label for="t1l">datalist</label>       <input id="t1l" type="text" list="choices">
         <label for="t13">password</label>       <input id="t13" type="password">
         <label for="t17">search</label>         <input id="t17" type="search">
