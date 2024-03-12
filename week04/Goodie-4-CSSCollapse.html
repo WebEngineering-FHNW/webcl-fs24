@@ -20,7 +20,7 @@
         }
 
         /* collapsed div todo: change css selector*/
-        .changeme {
+        input:checked + label + div.collapsible {
             max-height: 0;
             transition:  max-height 0.5s ease-out;
         }
@@ -29,7 +29,7 @@
             display: none;
         }
 
-        input[type=checkbox].hidden + label.toggle::before {
+        input.hidden + label.toggle::before {
             content:    '';
             display:    inline-block;
             position:    relative;
@@ -42,9 +42,8 @@
         }
 
         /* todo rotate arrow on collapse */
-        .changeme {
+        input.hidden:checked + label.toggle::before {
             transform:  rotate(-90deg);
-            transition: transform 0.5s;
         }
 
     </style>
@@ -68,6 +67,7 @@
     Some text after the section that flows up when the section is collapsed.
     Some text after the section that flows up when the section is collapsed.
 </p>
+
 
 
 </body>
