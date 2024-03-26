@@ -8,16 +8,15 @@
           background:   #1f1f56;
       }
       main {
-          perspective: 100vmax;
+          perspective: 200vmax;
       }
       main .starwars {
           --angle:          0;
-
-          --_angle-deg:     calc(1deg * var(--angle));
+          --angle-deg:      calc(1deg * var(--angle));
           padding:          2em;
           color:            lightgoldenrodyellow;
           background-color: rgba(255, 255, 255, .3);
-          transform:        rotateX(var(--_angle-deg));
+          transform:        rotateX(var(--angle-deg)) ;
           transform-origin: center top;
       }
       input[type=range] {
@@ -28,7 +27,6 @@
 </head>
 
 <body>
-
 
 <main>
     <div class="starwars">
@@ -41,7 +39,7 @@
     </div>
     <div>
         <label for="range"></label>
-        <input type="range" min="0" max="100" value="0" id="range">
+        <input type="range" min="0" max="100" value="50" id="range">
     </div>
 
 </main>
